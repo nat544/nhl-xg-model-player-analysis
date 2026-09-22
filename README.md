@@ -48,11 +48,10 @@ takes about 4 minutes to fetch on a fresh run.
 Goal rate in sample: ~5.1% (consistent with real NHL shooting percentages).
 Rebound shots: 3.6% of attempts. Rush shots: 1.9% of attempts.
 
-**The logistic regression baseline is not comparable to XGBoost here** — the two
-are statistically indistinguishable. That's a legitimate result, using well-selected features (distance, angle, game time,
+**The logistic regression baseline is comparable to XGBoost here** — the two
+are statistically very similar. That's a legitimate result, using well-selected features (distance, angle, game time,
 score state, strength state, rebound/rush), the relationship to goal
-probability is fairly smooth and close to linear in log-odds space, which is
-exactly what logistic regression is built to capture. 
+probability is fairly smooth and close to linear in log-odds space, which is what logistic regression captures.
 
 ### Finishing skill: goals above expected
 
