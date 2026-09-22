@@ -1,7 +1,6 @@
 # NHL Expected Goals (xG) Model — Spatio-Temporal Shot Quality
 
-A shot-quality ("expected goals") model for NHL shots, built to demonstrate
-**spatio-temporal modeling**: predicting an outcome (did this shot become a goal?)
+A shot-quality ("expected goals") model for NHL shots, predicting an outcome (did this shot become a goal?)
 from *where* on the ice a shot was taken combined with *when* in the game it
 happened and the context at that moment (score, strength state, rebound/rush).
 
