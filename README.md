@@ -48,6 +48,19 @@ of re-fetching. Set `FORCE_REFETCH = True` to pull fresh data, or widen
 and takes 30+ minutes, so that's best kicked off as a background script
 (see `src/fetch_data.py`'s `checkpoint_path` option) rather than run inline.
 
+## Testing
+
+```bash
+pytest tests/
+```
+
+36 unit tests cover the pure logic that doesn't require live network calls:
+feature-engineering geometry, rebound/rush classification (including the
+CSV-string type coercion needed when reading from the cache), game-clock
+math across regulation and overtime, shot extraction and prev-event tracking
+(using hand-built play-by-play fixtures), the disk cache round-trip, and the
+finishing-skill aggregation math.
+
 ## Results (60-day sample: 46,898 shots, ~450 games, Jan 1 - Feb 29, 2024)
 
 | Model | ROC-AUC | Log loss | Brier score |
