@@ -62,18 +62,18 @@ Goal rate in sample: ~5.1% (consistent with real NHL shooting percentages).
 Rebound shots: 3.6% of attempts. Rush shots: 1.9% of attempts.
 
 **The logistic regression baseline is comparable to XGBoost here** — the two
-are statistically very similar. That's a legitimate result, using well-selected features (distance, angle, game time,
-score state, strength state, rebound/rush), the relationship to goal
-probability is fairly smooth and close to linear in log-odds space, which is what logistic regression captures.
+are statistically very similar. Using well-selected features (distance,
+angle, game time, score state, strength state, rebound/rush), the
+relationship to goal probability is fairly smooth and close to linear in
+log-odds space, which is what logistic regression captures.
 
 ### Finishing skill: goals above expected
 
-Aggregating actual goals vs. out-of-fold xG by player surfaces exactly the
-players known for elite finishing — e.g., in this sample, Auston Matthews
-scored 26 goals on 14.5 expected across 202 shots (+11.5 goals above
-expected), consistent with his real-world reputation as one of the league's
-best shooters. That the analysis independently recovers a well-known result
-is a good sanity check that the underlying model and methodology are sound.
+Aggregating actual goals vs. out-of-fold xG by player surfaces the players
+known for elite finishing — e.g., in this sample, Auston Matthews scored 26
+goals on 14.5 expected across 202 shots (+11.5 goals above expected),
+consistent with his real-world reputation as one of the league's best
+shooters.
 
 This uses **out-of-fold** predictions (`cross_val_predict`).
 
